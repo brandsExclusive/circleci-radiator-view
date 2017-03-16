@@ -58,7 +58,7 @@
   }
 
   .fill-height-or-more > li {
-    flex: 1 0 10%;
+    flex: 1 0 20%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -151,7 +151,8 @@
       }
 
       var project = repository.reponame
-      _.map(repository.branches, createBranch)
+      // _.map(repository.branches, createBranch)
+      createBranch(repository.branches[repository.default_branch],repository.default_branch)
     }
 
     function calculateColumns(data) {
