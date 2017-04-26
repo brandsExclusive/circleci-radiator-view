@@ -127,7 +127,7 @@
           var buildIsRunning = branch.running_builds.length != 0
           var build = buildIsRunning ? branch.running_builds[0] : branch.recent_builds[0]
           var status = buildIsRunning ? build.status : build.outcome
-          var name = `${project}: ${decodeURIComponent(branchName)}`
+          var name = `${project}`
           var time = new Date(build.pushed_at)
 
           var newNode = document.createElement('li')
