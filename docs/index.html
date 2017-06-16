@@ -13,9 +13,9 @@
     width: 100%;
     height: 100%;
     box-sizing:border-box;
-    background: white;
+    background: black;
     font-family: "Roboto", Helvetica, Arial, sans-serif;
-    font-size: 20px;
+    font-size: 16px;
   }
   ul {
     padding: 0;
@@ -157,11 +157,11 @@
 
     function calculateColumns(data) {
       const builds = _.sumBy(data, repo => Object.keys(repo.branches).length)
-      return Math.min(5, Math.ceil(builds / 5))
+      return Math.min(4, Math.ceil(builds / 4))
     }
 
     function setRadiatorColumns(columns) {
-      radiator.classList.remove([1, 2, 3, 4, 5].map(n => 'split-' + n))
+      radiator.classList.remove([1, 2, 3, 4].map(n => 'split-' + n))
       radiator.classList.add('split-' + columns)
     }
 
