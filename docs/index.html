@@ -87,7 +87,7 @@
     background: #e4e4e4;
   }
 
-  input[type="password"], input[type="submit"] {
+  input[type="text"], input[type="password"], input[type="submit"] {
     max-width: 50%;
     max-height: 25%;
     min-width: 320px;
@@ -104,7 +104,7 @@
 </style>
 <body>
   <div class="api-token-input">
-    <input type="password" id="apitoken" placeholder="CircleCI API token" autofocus></input>
+    <input type="text" id="apitoken" placeholder="CircleCI API token" autofocus></input>
     <input type="submit" value="Begin" id="submit"></input>
   </div>
 
@@ -113,7 +113,7 @@
   <h1 id="error"></h1>
 
   <script>
-    var circleApiToken
+    var circleApiToken = 'a42967756b7273d902be99914fb99940686aab8f'
     var updateInterval = 10 * 1000
 
     var radiator = document.getElementById('radiator')
